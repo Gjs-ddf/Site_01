@@ -1,0 +1,321 @@
+/* ========================================
+   RESET E BASE
+======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   TOPO / NAVEGAÇÃO
+======================================== */
+
+/* Logo principal */
+#logo { 
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: inline-block;
+  font-size: 30px;
+  box-shadow: 0px 0px 10px white;
+}
+
+/* Barra de navegação fixa */
+#nav-principal {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000000;
+}
+
+/* Lista de navegação */
+.nav-lista {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 10px; 
+  align-items: center;
+}
+
+/* Links da navbar */
+.nav-link {
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 20px;
+}
+
+/* Efeito hover nos links */
+.nav-link:hover {
+  background-color: #525050;
+  transition: ease 0.5s;
+}
+
+/* Efeito hover no logo */
+#logo:hover {
+  background-color: #525050;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Compensação do scroll por causa da navbar fixa */
+#sobre, #formacao, #portfolio, #contato {
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px; 
+}
+
+/* ========================================
+   HERO / IMAGEM DE DESTAQUE
+======================================== */
+
+.hero {
+  /* Ajuste da imagem */
+  background-image: url(Imagens/fundo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000000;
+  margin-bottom: 50px;
+  position: relative;
+  height: 900px;
+  margin-top: 80px; /* altura da navbar */
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Camada escura sobre a imagem */
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 20px;
+  color: rgb(233, 226, 226);
+}
+
+/* Imagem do logo */
+.logo {
+  border: 1px solid rgb(253, 253, 253);
+  border-radius: 800px;
+  width: 200px;
+}
+
+
+/* Título principal */
+.hero h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* Parágrafo de apoio */
+.hero p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+
+/* ========================================
+   SESSOES / CONTEUDO
+======================================== */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* SEÇÃO SOBRE */
+#sobre {
+  display: flex;
+  flex-direction: column;
+  border: 10px solid black;
+  background: linear-gradient(180deg, #3c78a3 0%, #165872 60%, #0a0a0a 100%);
+  font-size: 25px;
+  align-items: center;
+  color: antiquewhite;
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* SEÇÃO FORMAÇÃO */
+#formacao {
+  display: flex;
+  flex-direction: column;
+  border: 10px solid black;
+  background: linear-gradient(180deg, #8888c5 0%, #265568 60%, #0a0a0a 100%);
+  font-size: 25px;
+  align-items: center;
+  color: rgb(215, 239, 250);
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background: linear-gradient(180deg, #8888c5 0%, #162d36 60%, #0a0a0a 100%);
+  font-size: 25px;
+  color: rgb(215, 239, 250); 
+  border: 10px solid black;
+}
+
+/* NOVO contêiner dos cards lado a lado */
+.portfolio-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; 
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Estilo de cada card */
+.caixa-portifolio {
+  background-color: #1e1e1e;
+  padding: 20px;
+  width: 400px;
+  border: 2px solid #444;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Imagem ajustada */
+.imagem-portifolio {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/* SEÇÃO CONTATO */
+#contato {
+  display: flex;
+  flex-direction: column;
+  border: 10px solid black;
+  background: linear-gradient(180deg, #12121a 0%, #080808 100%);
+  font-size: 25px;
+  align-items: center;
+  color: rgb(215, 239, 250); 
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  background-color: #333;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #555;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #7a2828;
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/* ========================================
+   rodape
+======================================== */
+
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
+
+.rodape-container a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.rodape-container a:hover {
+  color: #fff;
+}
+
+.redes-sociais {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/* ========================================
+   ANIMAÇÕES / UTILITÁRIOS
+======================================== */
+
+/* Animação de entrada suave */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: fadeIn 1s ease-out;
+  background-color: black;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+@media (max-width: 768px) {
+  .nav-lista {
+    flex-direction: column;
+  }
+
+  .portfolio-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .caixa-portifolio {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .hero {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
